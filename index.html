@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>type Racer</title>
+  </head>
+  <body>
+    <script src="script.js" defer></script>
+    <div id="firstPage">
+      <div id="timeContainer">
+        <div id="time">120</div>
+      </div>
+      <div id="container">
+        <div id="quote-mainContainer">
+          <div id="quoteContainer"></div>
+        </div>
+        <div style="width: 100%; box-sizing: border-box; padding-top: 25px">
+          <textarea
+            style="
+              resize: none;
+              outline: 0;
+              border-radius: 10px;
+              outline: none !important;
+              border: 1px solid black;
+              font-family: 'Montserrat';
+              height: 150px;
+              font-size: 20px;
+              background-color: #f5f5dc;
+            "
+            id="inputText"
+            name="inputText"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="submodal">
+            Your input has surpassed the acceptable character count in
+            comparison to the provided text.
+          </div>
+          <div class="dismissBtm" onclick="hideWarningModal()">Dismiss</div>
+        </div>
+      </div>
+
+      <div id="result_modal" class="result_modal">
+        <div class="result_modal-content">
+          <div id="result_submodal" class="result_submodal">
+            <div style="width: 100%">
+              <span
+                id="closeModal"
+                style="
+                  position: absolute;
+                  right: 0;
+                  cursor: pointer;
+                  font-size: 30px;
+                "
+                >&#x2715;</span
+              >
+            </div>
+            <div style="margin-top: 40px">
+              <canvas
+                id="myChart"
+                style="width: 100%; max-width: 600px; margin: 0 auto"
+              ></canvas>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                margin: 50px;
+                margin-top: 20px;
+              "
+            >
+              <div style="width: 100%">
+                <div
+                  style="
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 10px;
+                  "
+                >
+                  <p style="font-size: 30px; margin: 0; color: #a52a2a">WPM</p>
+                  <div id="wpm_display" style="font-size: 40px">70</div>
+                </div>
+                <div
+                  style="
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 10px;
+                  "
+                >
+                  <p style="font-size: 30px; margin: 0; color: #a52a2a">
+                    Errors
+                  </p>
+                  <div id="error_display" style="font-size: 40px">10</div>
+                </div>
+                <div
+                  style="
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 10px;
+                  "
+                >
+                  <p style="font-size: 30px; margin: 0; color: #a52a2a">
+                    Accuracy
+                  </p>
+                  <div id="percent_display" style="font-size: 40px">88%</div>
+                </div>
+                <div
+                  style="
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 30px;
+                  "
+                >
+                  <p style="font-size: 30px; margin: 0; color: #a52a2a">Time</p>
+                  <div id="time_display" style="font-size: 40px">30s</div>
+                </div>
+                <div
+                  style="
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 30px;
+                  "
+                >
+                  <p style="font-size: 30px; margin: 0; color: #a52a2a">Raw</p>
+                  <div id="raw_display" style="font-size: 40px">30</div>
+                </div>
+                <div
+                  style="
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    padding-top: 30px;
+                  "
+                >
+                  <p style="font-size: 30px; margin: 0; color: #a52a2a">
+                    Skill
+                  </p>
+                  <div id="skill_display" style="font-size: 30px">Average</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
