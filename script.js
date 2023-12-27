@@ -24,7 +24,7 @@ var stats = {
 // Get RandomQuotes, split them and create spans for the same
 async function GetRandomQuotes() {
   var mainWord = "";
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 1; i++) {
     var randomquote = await GenerateRandomQuotes();
     mainWord += randomquote + " ";
   }
@@ -43,7 +43,7 @@ function GetWords(words) {
 }
 
 function GenerateRandomQuotes() {
-  return fetch("http://api.quotable.io/random")
+  return fetch("https://api.quotable.io/random")
     .then((response) => response.json())
     .then((data) => data.content);
 
