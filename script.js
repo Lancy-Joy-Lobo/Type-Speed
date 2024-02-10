@@ -278,3 +278,7 @@ function closeModal() {
   incorrectEntries = 0;
   totalEntries = 0;
 }
+
+//A rose by any other name would smell as sweet
+//A rose by any other name would smell as sweet
+//A rose by any other name would smell as sweet
